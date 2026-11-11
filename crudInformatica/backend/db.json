@@ -1,0 +1,56 @@
+{
+  "Produtos": [
+    {
+    "nome": "Kauan",
+    "descricao": "esse eh meio bixa",
+    "preco": 126,
+    "quantidade": 19878,
+    "id": "1iNEI8-iWcQ"
+    },
+    {
+    "nome": "KEVEM",
+    "descricao": "esse eh bixa",
+    "preco": 100,
+    "quantidade": 102345,
+    "id": "1iNEI8-iWcQ"
+    },
+    {
+    "nome": "Joao",
+    "descricao": "esse eh homosexuakl",
+    "preco": 11200,
+    "quantidade": 110,
+    "id": "1iNEI8-iWcQ"
+    }
+  ],
+
+  "Clientes": [
+    {
+      "cpf": "12345678910",
+      "nome": "Enzo",
+      "sobrenome": "Santos",
+      "dtNascimento": "2001-01-18",
+      "email": "lorenzo@email.com",
+      "senha": "123",
+      "id": "1iNEI8-iWcQ"
+    },
+    {
+      "cpf": "10987654321",
+      "nome": "Ana Silva",
+      "sobrenome": "Santos",
+      "dtNascimento": "2008-06-17",
+      "email": "ana@email.com",
+      "senha": "123",
+      "id": "c_0Yd7hcGy4"
+    },
+    {
+      "cpf": "4567891231",
+      "nome": "Teste",
+      "sobrenome": "Souza",
+      "dtNascimento": "2026-10-26",
+      "email": "teste@teste.com",
+      "senha": "123",
+      "id": "oG9NSrgpa6g"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
