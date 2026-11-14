@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
-import {  Produto } from '../model/produto';
+import { Produto } from '../model/produto';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-
-
-
-
+@Injectable({
+  providedIn: 'root'
+})
 export class ProdutoService {
 
   private readonly API = 'http://localhost:3000/Produtos';
@@ -18,7 +17,6 @@ export class ProdutoService {
   }
 
   incluir(produto: Produto): Observable<Produto> {
-    console.log('Enviando produto para inclusão:', produto);
     return this.http.post<Produto>(this.API, produto);
   }
 

@@ -1,0 +1,14 @@
+<header class="topo">
+  <div class="container topo-conteudo">
+    <a class="logo" routerLink="/">
+      <img src="images/logo-hero-bay.png" alt="" width="28" height="28">
+      Hero Bay
+    </a>
+    <nav class="navegacao" aria-label="Menu principal">
+      @for (item of itensMenu; track item.link) {
+        <a [routerLink]="item.link">{{ item.label }}</a>
+      }
+    </nav>
+    <span class="area">Área administrativa</span>
+  </div>
+</header>

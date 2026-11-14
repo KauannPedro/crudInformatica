@@ -1,0 +1,127 @@
+.voltar {
+  display: inline-block;
+  margin-bottom: 36px;
+  padding: 10px 0;
+  font-size: 14px;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.duas-colunas {
+  display: flex;
+  align-items: flex-start;
+  gap: 72px;
+}
+
+.apresentacao {
+  width: 44%;
+}
+
+.foto {
+  display: block;
+  width: 100%;
+  margin-top: 36px;
+}
+
+.legenda {
+  margin-top: 14px;
+  color: #55534b;
+  font-size: 13px;
+}
+
+.formulario {
+  flex: 1;
+  min-width: 0;
+  padding-top: 4px;
+}
+
+.formulario h2 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.instrucao {
+  color: #55534b;
+  margin: 8px 0 28px;
+  font-size: 14px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 22px;
+  min-width: 0;
+}
+
+.campo label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.campo input, .campo textarea {
+  width: 100%;
+  background-color: #fffefb;
+  border: 1px solid #bbb8ac;
+  border-radius: 0;
+  padding: 13px 14px;
+}
+
+.campo textarea {
+  resize: vertical;
+}
+
+.campo input:disabled, .campo textarea:disabled {
+  background-color: #e8e6de;
+  color: #55534b;
+}
+
+.campos-numericos {
+  display: flex;
+  gap: 20px;
+}
+
+.campos-numericos .campo {
+  flex: 1;
+}
+
+.acoes-formulario {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  border-top: 1px solid #dddbd2;
+  padding-top: 24px;
+}
+
+.cancelar {
+  padding: 12px 0;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  font-size: 14px;
+}
+
+@media (max-width: 800px) {
+  .duas-colunas {
+    flex-direction: column;
+    gap: 36px;
+  }
+  .apresentacao, .formulario {
+    width: 100%;
+  }
+  .foto, .legenda {
+    display: none;
+  }
+  .voltar {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 400px) {
+  .campos-numericos {
+    flex-direction: column;
+    gap: 0;
+  }
+  .acoes-formulario {
+    flex-wrap: wrap;
+  }
+}

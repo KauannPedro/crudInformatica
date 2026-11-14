@@ -1,0 +1,63 @@
+<main class="container pagina">
+  <div class="cabecalho">
+    <div>
+      <p class="subtitulo">Administração da loja</p>
+      <h1 class="titulo">Produtos</h1>
+      <p class="texto-apoio">Cuide do catálogo da Hero Bay.</p>
+    </div>
+    <a class="botao" routerLink="/produto-cadastro">Novo produto</a>
+  </div>
+  <div class="secao">
+    <h2>Catálogo de informática</h2>
+    @if (!carregando && mensagemErro === '') {
+      <span>{{ listaProdutos.length }} produtos cadastrados</span>
+    }
+  </div>
+  @if (carregando) {
+    <p class="aviso" role="status">Carregando produtos...</p>
+  }
+  @if (mensagemErro !== '') {
+    <p class="erro" role="alert">{{ mensagemErro }}</p>
+  }
+  @if (!carregando && mensagemErro === '' && listaProdutos.length === 0) {
+    <div class="vazio">
+      <h2>Nenhum produto cadastrado.</h2>
+      <p>Adicione o primeiro produto ao catálogo da loja.</p>
+      <a class="botao" routerLink="/produto-cadastro">Cadastrar produto</a>
+    </div>
+  }
+  @if (listaProdutos.length > 0) {
+    <div class="tabela-container" tabindex="0" role="region" aria-label="Lista de produtos">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Produto</th>
+            <th scope="col">Preço</th>
+            <th scope="col">Estoque</th>
+            <th scope="col">Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (produto of listaProdutos; track produto.id) {
+            <tr>
+              <td class="codigo">{{ produto.id }}</td>
+              <td class="produto">
+                <strong>{{ produto.nome }}</strong>
+                <p>{{ produto.descricao }}</p>
+              </td>
+              <td class="preco">R$ {{ produto.preco }}</td>
+              <td class="estoque">{{ produto.quantidade }}</td>
+              <td>
+                <div class="acoes">
+                  <a class="acao" [routerLink]="['/admin-produtos-editar', produto.id]">Editar</a>
+                  <button class="acao excluir" type="button" [disabled]="excluindo" (click)="excluir(produto.id)">Excluir</button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</main>

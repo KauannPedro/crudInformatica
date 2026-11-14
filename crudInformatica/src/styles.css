@@ -1,1 +1,118 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Archivo';
+  src: url('/fonts/Archivo.ttf') format('truetype');
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f5f4ef;
+  color: #111111;
+  font-family: 'Archivo', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible, button:focus-visible, input:focus-visible,
+textarea:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 4px;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.pagina {
+  min-height: calc(100vh - 163px);
+  padding-top: 56px;
+  padding-bottom: 72px;
+}
+
+.titulo {
+  margin: 8px 0 0;
+  font-size: 64px;
+  font-weight: 800;
+  font-stretch: 125%;
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+}
+
+.subtitulo {
+  margin: 0;
+  color: #55534b;
+  font-size: 14px;
+}
+
+.texto-apoio {
+  margin: 18px 0 0;
+  font-size: 19px;
+  color: #55534b;
+  max-width: 440px;
+}
+
+.botao {
+  display: inline-block;
+  text-align: center;
+  background-color: #111111;
+  color: #f5f4ef;
+  border: 1px solid #111111;
+  padding: 14px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.botao:hover {
+  background-color: #33322d;
+}
+
+.botao:disabled {
+  background-color: #dddbd2;
+  border-color: #dddbd2;
+  color: #55534b;
+  cursor: not-allowed;
+}
+
+.erro {
+  color: #a32118;
+  padding: 14px 0;
+}
+
+@media (max-width: 700px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .pagina {
+    padding-top: 32px;
+    padding-bottom: 48px;
+  }
+  .titulo {
+    font-size: 42px;
+    letter-spacing: -1px;
+  }
+}

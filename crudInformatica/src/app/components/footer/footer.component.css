@@ -1,0 +1,28 @@
+.rodape {
+  border-top: 1px solid #dddbd2;
+}
+
+.rodape-conteudo {
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 13px;
+  color: #55534b;
+}
+
+.rodape strong {
+  color: #111111;
+  font-size: 16px;
+}
+
+@media (max-width: 600px) {
+  .rodape-conteudo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}

@@ -1,59 +1,100 @@
-# CrudInformatica
+﻿# HeroBayADO2
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.27.
+CRUD de produtos da Hero Bay para a ADO 2 de Projeto Integrador II.
 
-## Development server
+## Executar
 
-To start a local development server, run:
+Abra os terminais na pasta que contém este README e o `package.json`.
 
-```bash
-ng serve
+Instale as dependências:
+
+```powershell
+npm.cmd install
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+No primeiro terminal, inicie o JSON Server:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```powershell
+npm.cmd run api
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+No segundo terminal, inicie o Angular:
 
-```bash
-ng generate --help
+```powershell
+npm.cmd start
 ```
 
-## Building
+Acesse http://localhost:4200. A API fica em http://localhost:3000/Produtos.
+Mantenha os dois terminais abertos. Se a API já estiver rodando na porta 3000, use a instância existente.
 
-To build the project run:
+Também é possível iniciar a API como nos slides: entre em `backend` e execute `npx.cmd json-server db.json`.
 
-```bash
-ng build
+## Funcionamento
+
+- A página inicial lista os produtos da API.
+- Novo produto abre o formulário de cadastro.
+- Editar abre o mesmo formulário, carregando o produto pelo ID da rota.
+- Excluir pede confirmação e remove o registro da API e da tabela.
+- O JSON Server grava as alterações em `backend/db.json`.
+- O formulário exige nome, descrição, preço positivo e quantidade inteira não negativa.
+
+## Arquivos principais
+
+| Parte | Arquivo |
+| --- | --- |
+| Modelo | `src/app/model/produto.ts` |
+| Serviço HTTP | `src/app/service/produtos.service.ts` |
+| Listagem | `src/app/pages/produtos/prod-service.components.ts`, `.html` e `.css` |
+| Cadastro e edição | `src/app/pages/produto-form/produto-form.component.ts`, `.html` e `.css` |
+| Rotas | `src/app/app.routes.ts` |
+| Configuração HTTP | `src/app/app.config.ts` |
+| Menu e rodapé | `src/app/components/menu` e `src/app/components/footer` |
+| Banco simulado | `backend/db.json` |
+
+## Relação com as aulas
+
+- Aula 5, página 10: projeto Angular sem SSR.
+- Aula 6, páginas 7, 20 e 21: vinculação de propriedades, `FormsModule` e `ngModel`.
+- Aula 7, páginas 7, 8 e 12: rotas, `RouterLink` e `router-outlet`.
+- Aula 8, páginas 15 a 21: serviço injetável, interface, `OnInit` e listagem com `@for`.
+- CRUD Parte 2, páginas 12 a 21: JSON Server, `provideHttpClient`, `HttpClient` e `Observable`.
+- CRUD Parte 2, páginas 23 a 27: `subscribe`, exclusão com confirmação e formulário de inclusão.
+- CRUD Parte 3, páginas 9 a 14: consulta por ID, PUT e formulário compartilhado para cadastro e alteração.
+
+O projeto usa os campos `id`, `nome`, `descricao`, `preco` e `quantidade` da ADO. A quantidade representa o estoque exibido na tela. Os produtos existentes foram preservados.
+
+A identidade visual, o logo e a imagem do computador vêm do [PI Hero Bay](https://github.com/KauannPedro/hero-bay). A fonte Archivo está em `public/fonts`, junto da licença. O código da ADO usa a camada de serviços e a API exigidas na atividade.
+
+O nome do projeto Angular é `HeroBayADO2`; a pasta existente foi mantida como `crudInformatica` para preservar o caminho de trabalho.
+
+## Conferência manual
+
+1. Cadastre um produto e confira a listagem e o `db.json`.
+2. Recarregue a página e confirme que o produto continua cadastrado.
+3. Edite o preço e a quantidade e recarregue novamente.
+4. Cancele uma exclusão e confira que o produto permanece.
+5. Confirme a exclusão e confira a remoção também no `db.json`.
+
+Para compilar:
+
+```powershell
+npm.cmd run build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Testes automatizados
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+```powershell
+npm.cmd test
 ```
 
-## Running end-to-end tests
+Executa os testes Jasmine/Karma uma vez e encerra. No Windows, a configuração procura Chrome ou Edge instalado. Não é necessário abrir a aplicação nem iniciar o JSON Server: as respostas HTTP são simuladas nos testes, sem alterar o `db.json`.
 
-For end-to-end (e2e) testing, run:
+Os arquivos `.spec.ts` verificam as chamadas do serviço, o cadastro, a edição, as validações, a listagem e a confirmação de exclusão. São arquivos de verificação separados da implementação do CRUD baseada nas aulas.
 
-```bash
-ng e2e
+Para repetir os testes automaticamente enquanto edita:
+
+```powershell
+npm.cmd run test:watch
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+PDF e vídeo não fazem parte desta entrega de código.

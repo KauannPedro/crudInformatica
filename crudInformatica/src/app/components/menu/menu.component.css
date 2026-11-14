@@ -1,0 +1,58 @@
+.topo {
+  border-bottom: 1px solid #dddbd2;
+}
+
+.topo-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+  gap: 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 19px;
+  font-stretch: 112%;
+  min-height: 44px;
+}
+
+.navegacao {
+  display: flex;
+  gap: 28px;
+  font-size: 14px;
+}
+
+.navegacao a {
+  padding: 12px 0;
+}
+
+.navegacao a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.area {
+  color: #55534b;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  .topo-conteudo {
+    flex-wrap: wrap;
+    gap: 0 16px;
+    padding-top: 10px;
+    padding-bottom: 4px;
+  }
+  .area {
+    margin-left: auto;
+    font-size: 12px;
+  }
+  .navegacao {
+    order: 3;
+    width: 100%;
+  }
+}

@@ -1,28 +1,27 @@
 {
   "Produtos": [
     {
-    "nome": "Kauan",
-    "descricao": "esse eh meio bixa",
-    "preco": 126,
-    "quantidade": 19878,
-    "id": "1iNEI8-iWcQ"
+      "id": "1",
+      "nome": "Mouse Gamer Sem Fio Logitech® G PRO X SUPERLIGHT",
+      "descricao": "O Mouse Gamer Sem Fio Logitech® G PRO, desenvolvido em colaboração com diversos jogadores de esports, é um mouse pronto para torneios, ajustado para jogos competitivos. Movido pela tecnologia sem fio LIGHTSPEED™ e pelo sensor HERO 25K, o Mouse Gamer Sem Fio PRO oferece desempenho altamente responsivo envolto em um design leve e personalizável.",
+      "preco": 719.91,
+      "quantidade": 10
     },
     {
-    "nome": "KEVEM",
-    "descricao": "esse eh bixa",
-    "preco": 100,
-    "quantidade": 102345,
-    "id": "1iNEI8-iWcQ"
+      "id": "2",
+      "nome": "Teclado Magnético Akko Monsgeek Fun60 Pro 8000hz Preto Layout Us RGB",
+      "descricao": "O MONSGEEK FUN60 Pro é a escolha ideal para gamers exigentes que querem velocidade, precisão e estilo. Compacto (61%), leve e com recursos de ponta, ele oferece resposta ultrarrápida e personalização total.",
+      "preco": 369.55,
+      "quantidade": 5
     },
     {
-    "nome": "Joao",
-    "descricao": "esse eh homosexuakl",
-    "preco": 11200,
-    "quantidade": 110,
-    "id": "1iNEI8-iWcQ"
+      "id": "3",
+      "nome": "Monitor",
+      "descricao": "Monitor de 24 polegadas",
+      "preco": 750,
+      "quantidade": 3
     }
   ],
-
   "Clientes": [
     {
       "cpf": "12345678910",

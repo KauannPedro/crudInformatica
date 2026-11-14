@@ -1,13 +1,14 @@
 {
-  "name": "crud-informatica",
+  "name": "hero-bay-ado2",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:crudInformatica": "node dist/crud-informatica/server/server.mjs"
+    "test": "ng test --watch=false",
+    "test:watch": "ng test --watch",
+    "api": "json-server backend/db.json"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +22,7 @@
     "@angular/router": "^19.2.0",
     "@angular/ssr": "^19.2.27",
     "express": "^4.18.2",
+    "json-server": "^1.0.0-beta.15",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"

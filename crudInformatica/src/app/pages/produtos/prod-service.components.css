@@ -1,0 +1,137 @@
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 52px;
+}
+
+.secao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid #dddbd2;
+  padding-bottom: 18px;
+  margin-bottom: 16px;
+}
+
+.secao h2 {
+  font-size: 17px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.secao span {
+  font-size: 13px;
+  color: #55534b;
+}
+
+.tabela-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th {
+  padding: 16px 18px 16px 0;
+  border-bottom: 2px solid #111111;
+  text-align: left;
+  font-weight: 600;
+}
+
+td {
+  padding: 26px 18px 26px 0;
+  border-bottom: 1px solid #dddbd2;
+  vertical-align: top;
+}
+
+.codigo {
+  color: #55534b;
+  max-width: 130px;
+  overflow-wrap: anywhere;
+}
+
+.produto {
+  width: 52%;
+  min-width: 240px;
+}
+
+.produto strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.produto p {
+  color: #55534b;
+  margin: 10px 0 0;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.preco {
+  white-space: nowrap;
+  min-width: 115px;
+}
+
+.estoque {
+  min-width: 80px;
+}
+
+.acoes {
+  display: flex;
+  gap: 18px;
+}
+
+.acao {
+  display: inline-block;
+  background: none;
+  border: none;
+  padding: 0 0 12px;
+  min-height: 44px;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.excluir {
+  color: #a32118;
+}
+
+.acao:disabled {
+  color: #55534b;
+  cursor: wait;
+}
+
+.aviso, .vazio {
+  padding: 40px 0;
+}
+
+.vazio p {
+  color: #55534b;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 700px) {
+  .cabecalho {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 36px;
+  }
+  .secao {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .acoes {
+    flex-direction: column;
+    gap: 0;
+  }
+}
