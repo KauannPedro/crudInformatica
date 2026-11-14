@@ -81,20 +81,6 @@ Para compilar:
 npm.cmd run build
 ```
 
-## Testes automatizados
-
-```powershell
-npm.cmd test
-```
-
-Executa os testes Jasmine/Karma uma vez e encerra. No Windows, a configuração procura Chrome ou Edge instalado. Não é necessário abrir a aplicação nem iniciar o JSON Server: as respostas HTTP são simuladas nos testes, sem alterar o `db.json`.
-
-Os arquivos `.spec.ts` verificam as chamadas do serviço, o cadastro, a edição, as validações, a listagem e a confirmação de exclusão. São arquivos de verificação separados da implementação do CRUD baseada nas aulas.
-
-Para repetir os testes automaticamente enquanto edita:
-
-```powershell
-npm.cmd run test:watch
-```
+As aulas usam `--skip-tests` na geração dos componentes e orientam testar as operações no navegador. Esta entrega segue essa abordagem, sem arquivos `.spec.ts` ou configuração personalizada de testes. O comando `test` e as dependências de teste originais do Angular permanecem no projeto, mas não há uma suíte automatizada para executar.
 
 PDF e vídeo não fazem parte desta entrega de código.
